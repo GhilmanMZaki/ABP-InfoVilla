@@ -38,6 +38,17 @@
 .pb-2 .p{
   font-size: 14px;
 }
+.lokasi {
+  background-color: white
+}
+.lokasi:hover {
+  background-color: black;
+  transition: 0.5s;
+}
+
+.lokasi .text-dark h3:hover {
+  color: white
+}
 </style>
 </head>
 <body>
@@ -73,8 +84,8 @@
       </div>    
     </div>
 
-    <!--Card Rekomendasi -->  
     <div class="container pb-xl-4 shadow-lg">
+      <!--Card Rekomendasi -->  
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 text-center py-5">
@@ -93,6 +104,7 @@
                 <span class="pt-3">
                   <i class="ri-hotel-bed-fill ri-xl"></i> 2
                   <p>Kamar Tidur</p>
+                  <span class="fa fa-star fa-3x"></span>
                 </span>
 
                 <span class="pt-3">
@@ -160,6 +172,55 @@
             </div>
           </div>     
         </div>
+      </div>
+
+      <!-- Temukan Lokasi -->
+      <div class="container py-lg-4 bg-success">
+        <div class="row justify-content-center">
+          <div class="col-12 my-xl-3 text-center">
+            <h1 class="text-light">Temukan Lokasi Villa Pilihanmu</h1>
+          </div>
+          <div class="col-2 mx-5 my-lg-3 ">
+            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
+              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
+            </div>
+          </div>
+          <div class="col-2 mx-5 my-lg-3 ">
+            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
+              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
+            </div>
+          </div>
+          <div class="col-2 mx-5 my-lg-3 ">
+            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
+              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
+            </div>
+          </div>
+          <div class="col-2 mx-5 my-lg-3 ">
+            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
+              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
+            </div>
+          </div>
+          <div class="col-2 mx-5 my-lg-3 ">
+            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
+              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
+            </div>
+          </div> <div class="col-2 mx-5 my-lg-3 ">
+            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
+              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
+            </div>
+          </div>
+          <div class="col-2 mx-5 my-lg-3 ">
+            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
+              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
+            </div>
+          </div>
+          <div class="col-2 mx-5 my-lg-3 ">
+            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
+              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 

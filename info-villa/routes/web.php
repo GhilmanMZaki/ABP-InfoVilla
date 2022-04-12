@@ -19,7 +19,7 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/login', [loginController::class, 'index']);
+Route::get('/login', [loginController::class, 'index'])->middleware('guest');
 Route::post('/login', [loginController::class, 'authenticate']);
 
 Route::get('/signup', [UserController::class, 'create']);

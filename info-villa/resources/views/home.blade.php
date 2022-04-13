@@ -30,13 +30,16 @@
   color: aliceblue;
   transition: 0.5s
 }
-
-.pb-2{
-  padding-top: 5px;
-  font-size: 18px;
+.card:hover .card-fasilitas h4{
+  color: aliceblue;
+  transition: 0.5s
 }
-.pb-2 .p{
-  font-size: 14px;
+.card:hover .card-fasilitas p{
+  color: aliceblue;
+  transition: 0.5s
+}
+.card-fasilitas .bi {
+  color: rgb(252, 206, 0)
 }
 .lokasi {
   background-color: white
@@ -45,18 +48,20 @@
   background-color: black;
   transition: 0.5s;
 }
-
-.lokasi .text-dark h3:hover {
+.lokasi:hover .text-dark h4 {
   color: white
 }
 </style>
 </head>
 <body>
+  <!--Navbar -->  
   @include('partial.navbar')
-    
+  
+  <!--Kolom Search -->  
   @include('partial.search')
 
     <div class="container pb-xl-4 shadow-lg">
+
       <!--Card Rekomendasi -->  
       <div class="container-fluid">
         <div class="row">
@@ -75,45 +80,7 @@
           <div class="col-12 my-xl-3 text-center">
             <h1 class="text-light">Temukan Lokasi Villa Pilihanmu</h1>
           </div>
-          <div class="col-2 mx-5 my-lg-3 ">
-            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
-              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
-            </div>
-          </div>
-          <div class="col-2 mx-5 my-lg-3 ">
-            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
-              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
-            </div>
-          </div>
-          <div class="col-2 mx-5 my-lg-3 ">
-            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
-              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
-            </div>
-          </div>
-          <div class="col-2 mx-5 my-lg-3 ">
-            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
-              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
-            </div>
-          </div>
-          <div class="col-2 mx-5 my-lg-3 ">
-            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
-              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
-            </div>
-          </div> <div class="col-2 mx-5 my-lg-3 ">
-            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
-              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
-            </div>
-          </div>
-          <div class="col-2 mx-5 my-lg-3 ">
-            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
-              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
-            </div>
-          </div>
-          <div class="col-2 mx-5 my-lg-3 ">
-            <div class="lokasi pb-1 d-flex justify-content-center align-content-center">
-              <a href="#" class="text-dark text-center text-decoration-none"><h3>Bandung</h3></a>
-            </div>
-          </div>
+          @include('partial.lokasi')
         </div>
 
       </div>

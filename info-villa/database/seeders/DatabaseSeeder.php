@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Villa;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,6 +24,13 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('admin123'),
             'isAdmin' => true,
             'asal' => "",
+        ]);
+
+        Villa::create([
+            'namaVilla' => 'Villa Parahyangan',
+            'lokasi' => 'Bandung',
+            'deskripsi' => 'Villa Parahyangan',
+            'harga' => '2.000.000'
         ]);
     }
 }

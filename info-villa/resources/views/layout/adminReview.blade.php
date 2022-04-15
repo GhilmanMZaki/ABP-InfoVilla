@@ -114,9 +114,9 @@
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
                     class="fas fa-user-secret me-2"></i>Menu Admin</div>
             <div class="list-group list-group-flush my-3">
-                <a href="/dashboard/villa" class="list-group-item list-group-item-action bg-transparent second-text active"><i
+                <a href="/dashboard/villa" class="list-group-item list-group-item-action bg-transparent second-text"><i
                         class="fas fa-tachometer-alt me-2"></i>Data Villa</a>
-                <a href="/dashboard/review" class="list-group-item list-group-item-action bg-transparent second-text fw-bold "><i
+                <a href="/dashboard/review" class="list-group-item list-group-item-action bg-transparent second-text fw-bold active"><i
                         class="fas fa-project-diagram me-2"></i>Data Review</a>
                 <form action="/logout" method="post">
                   @csrf
@@ -160,7 +160,7 @@
 
             <div class="container-fluid px-4">
                 <div class="row my-5">
-                  @yield('master')
+                  @yield('adminReview')
                 </div>
 
             </div>

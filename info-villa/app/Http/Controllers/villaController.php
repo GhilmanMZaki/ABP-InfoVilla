@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Villa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
-class homeController extends Controller
+class villaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,7 @@ class homeController extends Controller
     public function index()
     {
         $villa = Villa::all();
-        return view('home', compact('villa'));
+        return view('kelolaVilla', compact('villa'));
     }
 
     /**
@@ -36,7 +37,20 @@ class homeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'namaVilla' => 'required|unique:villas|min:5|max:100',
+            'lokasi' => 'required',
+            'deskripsi' => 'required',
+            'harga' => 'required',
+            'image' => 'required|mimes:jpg,png,jpeg',
+        ]);
+        $fileName = Str::slug($request->namaVilla);
+        $fileName .= '.' . $request->file('image')->guessClientExtension();
+        $request->file('image')->storeAs('public/images', $fileName);
+        $validated['image'] = $fileName;
+
+        Villa::create($validated);
+        return redirect('/dashboard/villa')->with('status', 'Upload berhasil!');
     }
 
     /**
@@ -81,6 +95,8 @@ class homeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Villa::find($id);
+        $data->delete();
+        return redirect('/dashboard/villa')->with('status', 'Data telah dihapus');
     }
 }

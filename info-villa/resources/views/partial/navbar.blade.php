@@ -18,7 +18,7 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="#">Profil Saya</a></li>
-                <li><a class="dropdown-item" href="#">Kelola Villa</a></li>
+                <li><a class="dropdown-item" href="/dashboard/villa">Menu Admih</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <form action="/logout" method="post">
                   @csrf

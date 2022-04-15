@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Villa;
 use Illuminate\Http\Request;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
-class homeController extends Controller
+class reviewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class homeController extends Controller
      */
     public function index()
     {
-        $villa = Villa::all();
-        return view('home', compact('villa'));
+        return view('kelolaReview');
     }
 
     /**

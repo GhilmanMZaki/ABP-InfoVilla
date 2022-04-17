@@ -39,5 +39,4 @@ autofocus required value=" {{ old('username') }}">
 </div>
 <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
 </form>
-</main>
 @endsection

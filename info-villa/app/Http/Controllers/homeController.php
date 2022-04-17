@@ -17,7 +17,7 @@ class homeController extends Controller
         $lokasi = Villa::all();
         $villa = Villa::latest();
         if (request('search')) {
-            $villa->where('lokasi', 'like', '%' . request('search') . '%');
+            $villa->where('namaVilla', 'like', '%' . request('search') . '%');
         }
         return view('home', [
             'villa' => $villa->get(),

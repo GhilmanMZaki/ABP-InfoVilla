@@ -11,7 +11,7 @@
       <div class="card-fasilitas ms-xl-3">
         <h4>{{ $row->harga }} / Malam</h4>
         <p><i class="bi bi-star-fill"></i> 0.0</p>
-        <form action="/{{ $row->id }}">
+        <form action="/villa/{{ $row->id }}">
           @csrf
           <input class="form-control me-1" type="hidden"
           name="id" aria-label="id" value="{{ $row->id }}" >

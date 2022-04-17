@@ -85,6 +85,7 @@
 
       </div>
     </div>
+    @include('partial.footer')
 
 
 

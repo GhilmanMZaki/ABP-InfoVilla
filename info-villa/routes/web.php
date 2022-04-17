@@ -21,17 +21,17 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [homeController::class, 'index']);
-Route::get('/{id}', [villaController::class, 'viewVilla']);
+Route::get('/villa/{id}', [villaController::class, 'viewVilla']);
+Route::get('/profile/{username}', [UserController::class, 'index']);
 
-Route::get('/dashboard', [villaController::class, 'index']);
-Route::get('/dashboard/villa', [villaController::class, 'index']);
-Route::get('/dashboard/villa/delete/{id}', [villaController::class, 'destroy']);
-Route::post('/dashboard/villa/store', [villaController::class, 'store']);
-Route::get('/dashboard/review', [reviewController::class, 'index']);
-
-Route::get('/login', [loginController::class, 'index'])->middleware('guest');
+Route::get('/login', [loginController::class, 'index']);
 Route::post('/login', [loginController::class, 'authenticate']);
 Route::post('/logout', [loginController::class, 'logout']);
 
 Route::get('/signup', [UserController::class, 'create'])->middleware('guest');
 Route::post('/signup/store', [UserController::class, 'store']);
+
+Route::get('/dashboard/villa', [villaController::class, 'index'])->middleware('auth');
+Route::get('/dashboard/villa/delete/{id}', [villaController::class, 'destroy']);
+Route::post('/dashboard/villa/store', [villaController::class, 'store']);
+Route::get('/dashboard/review', [reviewController::class, 'index']);

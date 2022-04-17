@@ -14,7 +14,7 @@
                 Hai, {{ auth()->user()->username }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Profil Saya</a></li>
+                <li><a class="dropdown-item" href="/profile/{{ Str::slug(auth()->user()->username) }}">Profil Saya</a></li>
                 <li><a class="dropdown-item" href="/dashboard/villa">Menu Admin</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <form action="/logout" method="post">
@@ -29,7 +29,7 @@
                 Hai, {{ auth()->user()->username }}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Profil Saya</a></li>
+                <li><a class="dropdown-item" href="/profile/{{ Str::slug(auth()->user()->username) }}">Profil Saya</a></li>
                 <li><a class="dropdown-item" href="#">Villa Favorit</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <form action="/logout" method="post">

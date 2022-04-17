@@ -16,9 +16,6 @@ class villaController extends Controller
     public function index()
     {
         $villa = Villa::latest();
-        if (request('search')) {
-            $villa->where('lokasi', 'like', '%' . request('search') . '%');
-        }
         return view('kelolaVilla', compact('villa'));
     }
 
@@ -104,11 +101,11 @@ class villaController extends Controller
         return redirect('/dashboard/villa')->with('status', 'Data telah dihapus');
     }
 
-    public function viewVilla()
+    public function viewVilla($id)
     {
         $villa = Villa::latest();
         if (request('id')) {
-            $villa->where('id', 'like', '%' . request('id') . '%');
+            $villa->where('id', $id)->first();
         }
         return view('villa', [
             "villa" => $villa->get()

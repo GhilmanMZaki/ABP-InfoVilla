@@ -18,24 +18,126 @@
 <body>
   @include('partial.navbar')
   @foreach ($villa as $row)
-  <div class="container">
-    <h1>{{ $row->namaVilla }}</h1>
-    <img src="{{url('/storage/images/'.$row->image)}}" alt="" sizes="" srcset="">
-    <p><i class="bi bi-star-fill"></i> 0.0</p>
+  <div class="container mt-lg-3 pb-lg-3 shadow-lg border border-dark">
+    <div class="row mb-3 py-3">
+      <div class="col-3 ">
+        <img src="{{url('/storage/images/'.$row->image)}}" alt="" width="300" height="300">
+      </div>
+      <div class="col-9 ms-auto">
+        <h1>{{ $row->namaVilla }}</h1>
+        <p style="font-size: 27px">Lokasi : {{ $row->lokasi }}</p>
+        <p style="font-size: 27px">Harga : {{ $row->harga }}/Malam</p>
+        <p style="font-size: 27px"><i class="bi bi-star-fill"></i> 0.0</p>
+      </div>
+    </div>
+    <hr class="bg-dark border-3 border-top border-dark">
     <h4>Deskripsi</h4>
-    <p style="white-space:pre">{{ $row->deskripsi }}</p>
+    <p style="white-space:pre-wrap">{{ $row->deskripsi }}</p>
     
-    <div class="container border-bottom-3">
-
+    <div class="row bg-success">
+      <div class="col-12">
+        <h2 class="text-light">Review</h2>
+      </div>
     </div>
 
+    <div class="row">
+      <hr class="bg-dark border-2 border-top border-dark">
+      <div class="col-3 text-center">
+        <i class="bi bi-person-square" style="font-size:3rem"></i>
+        <p>Username</br>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+        </p>
+          
+      </div>
+      <div class="col-8 ms-lg-3 bg">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ullam libero quam voluptate reiciendis sequi atque similique? 
+          Sequi maiores sapiente at eius quo! Maxime provident nemo vero assumenda, hic corporis voluptate?</p>
+      </div>
+      <hr class="bg-dark border-3 border-top border-dark">
+    </div>
+
+    <div class="row">
+      <hr class="bg-dark border-3 border-top border-dark">
+      <div class="col-3 text-center">
+        <i class="bi bi-person-square" style="font-size:3rem"></i>
+        <p>Username</br>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+        </p>
+          
+      </div>
+      <div class="col-8 ms-lg-3 bg">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ullam libero quam voluptate reiciendis sequi atque similique? 
+          Sequi maiores sapiente at eius quo! Maxime provident nemo vero assumenda, hic corporis voluptate?</p>
+      </div>
+      <hr class="bg-dark border-3 border-top border-dark">
+    </div>
+
+    <div class="row">
+      <hr class="bg-dark border-3 border-top border-dark">
+      <div class="col-3 text-center">
+        <i class="bi bi-person-square" style="font-size:3rem"></i>
+        <p>Username</br>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+          <span><i class="bi bi-star-fill"></i></span>
+        </p>
+          
+      </div>
+      <div class="col-8 ms-lg-3 bg">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Ullam libero quam voluptate reiciendis sequi atque similique? 
+          Sequi maiores sapiente at eius quo! Maxime provident nemo vero assumenda, hic corporis voluptate?</p>
+      </div>
+      <hr class="bg-dark border-3 border-top border-dark">
+    </div>
+
+    <div class="row bg-success">
+      <div class="col-12">
+        <h2 class="text-light">Review</h2>
+        @guest
+        <a href="/login" class="btn btn-light mb-3">Bagikan pengalaman anda</a>
+        @endguest
+      </div>
+    </div>
     @auth
-    <div class="container">
-      <h5>Submit Review</h5>
-      <form action="" method="post">
-        <div class="mb-3">
-          <p>Beri Rating</p>
-          <div class="starRate">
+    <form action="" method="post">
+      <div class="row">
+        <div class="col-12">
+          <p class="p-0">Beri Rating</p>
+          <ul class="nav justify-content-start me-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-star" style="font-size:2rem"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-star" style="font-size:2rem"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-star" style="font-size:2rem"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="bi bi-star" style="font-size:2rem"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#"><i class="bi bi-star" style="font-size:2rem"></i></a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="starRate">
           <label for="exampleFormControlTextarea1" class="form-label">Isi Review</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           <div class="mb-3">
@@ -44,10 +146,11 @@
           </div>
           <button type="submit" class="btn btn-success">Submit Review</button>
         </div>
-      </form>
-    </div>
-  </div>     
+      </div>
+    </form>
     @endauth
+  </div>
   @endforeach
+  @include('partial.footer')     
 </body>
 </html>

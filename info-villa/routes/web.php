@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\resultController;
 use App\Http\Controllers\reviewController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\villaController;
@@ -18,11 +19,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
-Route::get('/home', [homeController::class, 'index']);
+Route::get('/', [homeController::class, 'index']);
+Route::get('/{id}', [villaController::class, 'viewVilla']);
 
 Route::get('/dashboard', [villaController::class, 'index']);
 Route::get('/dashboard/villa', [villaController::class, 'index']);
@@ -30,7 +29,7 @@ Route::get('/dashboard/villa/delete/{id}', [villaController::class, 'destroy']);
 Route::post('/dashboard/villa/store', [villaController::class, 'store']);
 Route::get('/dashboard/review', [reviewController::class, 'index']);
 
-Route::get('/login', [loginController::class, 'index'])->name('login')->middleware('guest');
+Route::get('/login', [loginController::class, 'index'])->middleware('guest');
 Route::post('/login', [loginController::class, 'authenticate']);
 Route::post('/logout', [loginController::class, 'logout']);
 

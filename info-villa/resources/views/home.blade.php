@@ -66,10 +66,10 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 text-center py-5">
-            <h1 class="text-success">Rekomendasi Villa Untuk Kamu</h1>
+            <h1 class="text-success">Villa Untuk Kamu</h1>
           </div>
         </div>
-        <div class="row">
+        <div class="row align-content-center">
           @include('partial.cardRekomen')    
         </div>
       </div>

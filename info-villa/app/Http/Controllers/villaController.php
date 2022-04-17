@@ -15,7 +15,10 @@ class villaController extends Controller
      */
     public function index()
     {
-        $villa = Villa::all();
+        $villa = Villa::latest();
+        if (request('search')) {
+            $villa->where('lokasi', 'like', '%' . request('search') . '%');
+        }
         return view('kelolaVilla', compact('villa'));
     }
 
@@ -24,9 +27,10 @@ class villaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function villaDesc()
     {
-        //
+        $villa = Villa::all();
+        return view('villa', compact('villa'));
     }
 
     /**
@@ -98,5 +102,16 @@ class villaController extends Controller
         $data = Villa::find($id);
         $data->delete();
         return redirect('/dashboard/villa')->with('status', 'Data telah dihapus');
+    }
+
+    public function viewVilla()
+    {
+        $villa = Villa::latest();
+        if (request('id')) {
+            $villa->where('id', 'like', '%' . request('id') . '%');
+        }
+        return view('villa', [
+            "villa" => $villa->get()
+        ]);
     }
 }

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Villa;
 use Illuminate\Http\Request;
+use App\Models\Villa;
 
-class homeController extends Controller
+class resultController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,15 +14,12 @@ class homeController extends Controller
      */
     public function index()
     {
-        $lokasi = Villa::all();
-        $villa = Villa::latest();
+        $villa = Villa::all();
         if (request('search')) {
             $villa->where('lokasi', 'like', '%' . request('search') . '%');
+            return view('result', compact('villa'));
         }
-        return view('home', [
-            'villa' => $villa->get(),
-            'lokasi' => $lokasi
-        ]);
+        return view('result', compact('villa'));
     }
 
     /**

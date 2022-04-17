@@ -6,8 +6,8 @@
           <h4 class="text-light align-self-center">Cari Lokasi Villa</h4>
         </div>
         <div class="col-7 md-auto py-3 bg-dark">
-          <form class="d-flex" action="/" method="">
-            <input class="form-control me-2" name="searchLokasi" type="search" placeholder="Lokasi Villa" aria-label="Search">
+          <form class="d-flex" action="/">
+            <input class="form-control me-2" name="search" type="search" placeholder="Lokasi Villa" aria-label="Search">
             <button class="btn btn-success w-25" type="submit">Search <i class="bi bi-search"></i></button>
           </form>
         </div>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "952280777278",
+    "project_id": "infovilla-cba1c",
+    "storage_bucket": "infovilla-cba1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952280777278:android:11054892855347f788876f",
+        "android_client_info": {
+          "package_name": "com.example.infovillamobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "952280777278-e3bq44kvijukscl50vuq1gshr1pkct3c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB08twcyLbzR0AyGkI-4k4-SF256KDFAa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "952280777278-e3bq44kvijukscl50vuq1gshr1pkct3c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
